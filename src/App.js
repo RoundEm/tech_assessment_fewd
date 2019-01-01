@@ -9,7 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      books: []
+      booksA_M: [],
+      booksN_Z: []
     }
   }
   componentDidMount = () => {
@@ -18,13 +19,28 @@ class App extends Component {
       let textB = b.volumeInfo.title.toLowerCase()
       return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
     })
+    this.divideTitles(bookData.items)
+  }
+  divideTitles = books => {
+    let booksA_M = []
+    let booksN_Z = []
+    for (let i = 0; i < books.length; i++) {
+      // console.log('books[i].toLowerCase(): ', books[i].volumeInfo.title.toLowerCase().slice(0, 1))
+      let firstLetterOfTitle = bookData.items[i].volumeInfo.title.toLowerCase().slice(0, 1)
+      if (firstLetterOfTitle.charCodeAt(0) < 109) {
+        booksA_M.push(books[i])
+      } else {
+        booksN_Z.push(books[i])
+      }
+    }
     this.setState({
-      books: bookData.items
+      booksA_M,
+      booksN_Z
     })
   }
-  // componentDidUpdate = () => {
-  //   console.log('STATE: ', this.state)
-  // }
+  componentDidUpdate = () => {
+    console.log('STATE: ', this.state)
+  }
   render() {
     return (
       <div className="App">
@@ -33,10 +49,10 @@ class App extends Component {
           <h1>Books</h1>
 
           <h2>Titles A-M</h2>
-          <BookCards books={this.state.books} />
+          <BookCards books={this.state.booksA_M} />
 
           <h2>Titles N-Z</h2>
-          <BookCards books={this.state.books} />
+          <BookCards books={this.state.booksN_Z} />
         
         </div>
         <Footer />

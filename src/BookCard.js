@@ -6,7 +6,7 @@ const BookCard = props => {
         <Row>
             {props.books.map(book => {
                 return (
-                    <Col sm="3">
+                    <Col sm="2">
                         <Card body>
                             <CardImg 
                                 top 
