@@ -1,5 +1,5 @@
 ## Some TODOs that I didn't get to:
-- Make `Show More` buttons functional (although currently there's no more than 5 books to show for each section so more books would need to be added to the json file)
+- Make 'Show More' buttons functional (although currently there's no more than 5 books to show for each section so more books would need to be added to the json file)
 - Make site more responsive and add breakpoint so that books switch to full-width columns when on medium-small screens
 - Add functionality for books with multiple authors that adds commas in between each
 - Update footer to use reactstrap instead of vanilla bootstrap
