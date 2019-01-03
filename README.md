@@ -5,6 +5,9 @@
 - Update footer to use reactstrap instead of vanilla bootstrap
 - Clean-up unused boilerplate code from create-react-app
 
+## App Screenshots
+![alt text](/public/ScreenShotA.png)
+![alt text](/public/ScreenShotB.png)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
