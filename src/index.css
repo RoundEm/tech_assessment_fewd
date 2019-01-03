@@ -13,27 +13,38 @@ code {
     monospace;
 }
 
+.nav-brand, h4 {
+  margin-left: 67px;
+}
+.main {
+  margin: 0 80px;
+}
 h1 {
   margin: 35px 0;
 }
-h1, h2 {
+h1, h2, h4 {
   text-align: left;
 }
 ul {
   list-style-type: none;
   padding: 0;
 }
-.nav-brand {
-  margin-left: 37px;
-}
-.main {
-  margin: 0 50px;
-}
 .book-card {
   max-height: 500px;
   /* white-space: nowrap;  */
   overflow: hidden;
   text-overflow: ellipsis; 
+}
+.book-title {
+  font-weight: bold;
+}
+.book-title, .book-author {
+  font-size: .8em;
+}
+.show-more-btn {
+  margin: 25px 0;
+  padding: 7px;
+  font-size: .8em;
 }
 footer {
   margin-top: 50px;
@@ -44,4 +55,7 @@ footer {
   width: 100%;
   background-color: lightgray;
   text-align: center;
+}
+footer li {
+  text-align: left;
 }

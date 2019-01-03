@@ -1,5 +1,12 @@
 import React from 'react';
-import { Card, CardImg, CardTitle, CardSubtitle, Row, Col } from 'reactstrap';
+import { 
+    Card, 
+    CardImg, 
+    CardTitle, 
+    CardSubtitle, 
+    Row, 
+    Col, 
+    Button } from 'reactstrap';
 
 const BookCard = props => {
     return (
@@ -15,17 +22,17 @@ const BookCard = props => {
                                     src={book.volumeInfo.imageLinks.thumbnail} 
                                     alt={`Image of ${book.volumeInfo.title} book cover`} 
                                 />
-                                <CardTitle>{book.volumeInfo.title}</CardTitle>
-                                {/* TODO: loop and split authors when more than 1 exists */}
-                                <CardSubtitle>
-                                    By {book.volumeInfo.authors}
+                                <CardTitle className="book-title">{book.volumeInfo.title}</CardTitle>
+                                {/* TODO: add loop to split authors and add comma when more than 1 exists */}
+                                <CardSubtitle className="book-author">
+                                    By {book.volumeInfo.authors[0]}
                                 </CardSubtitle>
                             </Card>
                         </Col>
                     )
                 })}
             </Row>
-            <button>Show More</button>
+            <Button className="show-more-btn">SHOW MORE</Button>
         </>
     )
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import BookCards from './BookCard';
-import bookData from './books.json'
+import bookData from './books.json';
 import './App.css';
 
 class App extends Component {
@@ -36,9 +36,6 @@ class App extends Component {
       booksA_M,
       booksN_Z
     })
-  }
-  componentDidUpdate = () => {
-    console.log('STATE: ', this.state)
   }
   render() {
     return (
