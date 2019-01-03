@@ -6,7 +6,10 @@
 - Clean-up unused boilerplate code from create-react-app
 
 ## App Screenshots
+### 1st half of page
 ![alt text](/public/ScreenShotA.png)
+
+### 2nd half of page
 ![alt text](/public/ScreenShotB.png)
 
 
