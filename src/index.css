@@ -13,19 +13,35 @@ code {
     monospace;
 }
 
+h1 {
+  margin: 35px 0;
+}
+h1, h2 {
+  text-align: left;
+}
 ul {
   list-style-type: none;
   padding: 0;
 }
+.nav-brand {
+  margin-left: 37px;
+}
 .main {
   margin: 0 50px;
 }
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: lightgray;
-    color: white;
-    text-align: center;
+.book-card {
+  max-height: 500px;
+  /* white-space: nowrap;  */
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+footer {
+  margin-top: 50px;
+  padding: 20px 0 0;
+  /* position: fixed;
+  left: 0;
+  bottom: 0; */
+  width: 100%;
+  background-color: lightgray;
+  text-align: center;
 }

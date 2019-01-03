@@ -3,25 +3,30 @@ import { Card, CardImg, CardTitle, CardSubtitle, Row, Col } from 'reactstrap';
 
 const BookCard = props => {
     return (
-        <Row>
-            {props.books.map(book => {
-                return (
-                    <Col sm="2">
-                        <Card body>
-                            <CardImg 
-                                top 
-                                width="100%" 
-                                src={book.volumeInfo.imageLinks.thumbnail} 
-                                alt={`Image of ${book.volumeInfo.title} book cover`} 
-                            />
-                            <CardTitle>{book.volumeInfo.title}</CardTitle>
-                            {/* TODO: loop and split authors when more than 1 exists */}
-                            <CardSubtitle>By {book.volumeInfo.authors}</CardSubtitle>
-                        </Card>
-                    </Col>
-                )
-            })}
-        </Row>
+        <>
+            <Row className="d-flex justify-content-between">
+                {props.books.map(book => {
+                    return (
+                        <Col sm="2" className="book-card">
+                            <Card key={book.id} body className="book-card p-0">
+                                <CardImg 
+                                    top 
+                                    width="100%" 
+                                    src={book.volumeInfo.imageLinks.thumbnail} 
+                                    alt={`Image of ${book.volumeInfo.title} book cover`} 
+                                />
+                                <CardTitle>{book.volumeInfo.title}</CardTitle>
+                                {/* TODO: loop and split authors when more than 1 exists */}
+                                <CardSubtitle>
+                                    By {book.volumeInfo.authors}
+                                </CardSubtitle>
+                            </Card>
+                        </Col>
+                    )
+                })}
+            </Row>
+            <button>Show More</button>
+        </>
     )
 }
 

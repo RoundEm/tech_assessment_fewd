@@ -25,7 +25,6 @@ class App extends Component {
     let booksA_M = []
     let booksN_Z = []
     for (let i = 0; i < books.length; i++) {
-      // console.log('books[i].toLowerCase(): ', books[i].volumeInfo.title.toLowerCase().slice(0, 1))
       let firstLetterOfTitle = bookData.items[i].volumeInfo.title.toLowerCase().slice(0, 1)
       if (firstLetterOfTitle.charCodeAt(0) < 109) {
         booksA_M.push(books[i])

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 // import { Nav, NavItem, NavLink } from 'reactstrap';
 
-
 class Footer extends Component {
   render() {
     return (
-        <footer classNam="page-footer">
+        <footer className="page-footer">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-sm-3 align-items-center">
